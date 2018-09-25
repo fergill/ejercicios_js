@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicios JS</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body onload="showResult17()">
+	<p>¿Cuánto es 350 litros en centilitros?</p>
+	<p>La respuesta es:</p>
+	<p id="demo"></p>
+	<button type="button" onclick="showResult()">Ver Resultado</button>
+
+	<p>¿Cuántos metros son 5,3 kilómetros?</p>
+	<p>La respuesta es:</p>
+	<p id="demo1"></p>
+	<button type="button" onclick="showResult1()">Ver Resultado</button>
+
+	<p>¿Cuántos minutos tienen 24 horas?</p>
+	<p>La respuesta es:</p>
+	<p id="demo2"></p>
+	<button type="button" onclick="showResult2()">Ver Resultado</button>
+
+	<p>¿Cuántos son 4096 megabytes en gigabyte?</p>
+	<p>La respuesta es:</p>
+	<p id="demo3"></p>
+	<button type="button" onclick="showResult3()">Ver Resultado</button>
+
+	<p>¿Cuántos centímetros son 56 pulgadas?</p>
+	<p>La respuesta es:</p>
+	<p id="demo4"></p>
+	<button type="button" onclick="showResult4()">Ver Resultado</button>
+
+	<p>Un día... </p>
+	<p>La respuesta es:</p>
+	<p id="demo5"></p>
+	<button type="button" onclick="showResult5()">Ver Resultado</button>
+
+	<p>Calcula el precio final de un producto de valor 50€ - 20% + IVA (21%) </p>
+	<p>La respuesta es:</p>
+	<p id="demo6"></p>
+	<button type="button" onclick="showResult6()">Ver Resultado</button>
+
+	<p>Tabla de multiplicar introduciendo un número.</p>
+	<form>
+  		<input type="number" id="numero" value="" placeholder="Número:"><br>
+ 	 	<input type="button" value="Multiplicar" onclick="showResult7()">
+	</form>
+	<div id="demo7"></div>
+
+
+	<p>Comprobar si el número introducido es par o impar.</p>
+	<form>
+  		<input type="number" id="numero1" value="" placeholder="Número:"><br>
+ 	 	<input type="button" value="Es..." onclick="showResult8()">
+	</form>
+	<div id="demo8"></div>
+
+	<p>Comprobar si el número introducido es primo.</p>
+	<form>
+  		<input type="number" id="numero2" value="" placeholder="Número:"><br>
+ 	 	<input type="button" value="Es..." onclick="showResult9()">
+	</form>
+	<div id="demo9"></div>
+
+	<p>Introduzca edad entre 5 y 18 para conocer la categoría deportiva.</p>
+	<form>
+  		<input type="number" id="numer" value="" placeholder="Edad:"><br>
+ 	 	<input type="button" value="Enviar" onclick="showResult10()">
+	</form>
+	<div id="demo10"></div>
+
+	<p>Introduzca un mes para saber el trimestre a que pertenece.</p>
+	<form>
+  		<input type="text" id="mes" value="" placeholder="Mes:"><br>
+ 	 	<input type="button" value="Enviar" onclick="showResult11()">
+	</form>
+	<div id="demo11"></div><br>
+
+	<p>Introduzca una fecha para conocer tu signo del zodíaco.</p>
+	<form>
+  		<input type="date" id="born" value="" placeholder="Fecha de nacimiento:"><br>
+ 	 	<input type="button" value="Enviar" onclick="showResult12()">
+	</form><br>
+	<div id="demo12"></div><br>
+
+	<p>Introduzca tu código postal para saber a qué provincia pertenece.</p>
+	<form>
+  		<input type="text" id="cp" value="" maxlength="5" placeholder="Código Postal:"><br>
+ 	 	<input type="button" value="Enviar" onclick="showResult13()">
+	</form><br>
+	<div id="demo13"></div><br>
+	
+
+	<p>Introducir un número del 1 al 7 y que muestre el nombre del día de la semana.</p>
+	<form>
+  		<input type="number" id="entrada" value="" maxlength="1" placeholder="Número de 1 a 7:"><br>
+ 	 	<input type="button" value="Enviar" onclick="showResult14()">
+	</form><br>
+	<div id="demo14"></div><br>
+
+	<p>Introducir el DNI y la letra y comprobar si la letra es correcta. (TRWAGMYFPDXBNJZSQVHLCKET) (dni%23).</p>
+	<form>
+  		<input type="text" id="dni" value="" maxlength="9" placeholder="DNI:"><br>
+ 	 	<input type="button" value="Enviar" onclick="showResult15()">
+	</form><br>
+	<div id="demo15"></div><br>
+
+	<p>Introducir una hora y comprobar si es por la mañana, tarde o noche.</p>
+	<form>
+  		<input type="time" id="horayminutos" value="" placeholder="Hora:"><br>
+ 	 	<input type="button" value="Enviar" onclick="showResult16()">
+	</form><br>
+	<div id="demo16"></div><br>
+
+	<p>Crear un objeto para rellenar los campos de la tabla.</p>
+	<table border="1px" id="tabla">
+		<tr>
+			<th>Nombre</th>
+			<th>Apellidos</th>
+			<th>Teléfono</th>
+			<th>Email</th>
+			<th>Año Nacimiento</th>
+			<th>Edad</th>
+		</tr>
+	</table><br>
+	
+
+	<hr>
+
+
+
+
+	<script type="text/javascript" >
+		function showResult(){
+		var duda = 350;
+		var respuesta;
+		respuesta = duda * 1000;
+		document.getElementById('demo').innerHTML = respuesta; 
+		}
+
+		function showResult1(){
+		var duda = 5.3;
+		var respuesta;
+		respuesta = duda * 1000;
+		document.getElementById('demo1').innerHTML = respuesta; 
+		}		
+
+		function showResult2(){
+		var duda = 24;
+		var respuesta;
+		respuesta = duda * 60;
+		document.getElementById('demo2').innerHTML = respuesta; 
+		}		
+
+		function showResult3(){
+		var duda = 4096;
+		var respuesta;
+		respuesta = duda / 1024;
+		document.getElementById('demo3').innerHTML = respuesta; 
+		}
+
+		function showResult4(){
+		var duda = 56;
+		var respuesta;
+		respuesta = duda * 2.54;
+		document.getElementById('demo4').innerHTML = respuesta; 
+		}
+
+		function showResult5(){
+		var dia = 1;
+		var horas = dia * 24;
+		var minutos = horas * 60;
+		var segundos = minutos * 60;
+		
+		document.getElementById('demo5').innerHTML = "Así es: "+dia+" dia tiene "+horas+" horas, "+minutos+" minutos y "+segundos+" segundos"; 
+		}
+
+		function showResult6(){
+		var duda = 50;
+		var promo = duda - duda * 0.2;
+		var respuesta = promo+promo*0.21;
+		document.getElementById('demo6').innerHTML = respuesta; 
+		}		
+		
+		function showResult7(){
+			var inputElement = document.getElementById('numero').value;
+			for(i=0; i <=10; i++) {
+				document.getElementById('demo7').innerHTML += "<ul>"+inputElement * i +"</ul>";
+			}
+		}
+
+		function showResult9(){
+			var inputElement = document.getElementById('numero2').value;
+			if (inputElement % 1 == inputElement && inputElement % inputElement == 1) {
+				document.getElementById('demo9').innerHTML = "Es primo";
+			} else {
+				document.getElementById('demo9').innerHTML = "No es primo";
+			}
+		}		
+
+		function showResult10(){
+
+			var edad = parseInt(document.getElementById('numer').value);
+
+			if (edad >= 5 && edad <= 18){
+				
+				switch(edad){
+
+					case 5:
+					case 6:
+					case 7:
+					document.getElementById('demo10').innerHTML = "Prebenjamines";
+					break;					
+
+					case 8:
+					case 9:
+					document.getElementById('demo10').innerHTML = "Benjamines";
+					break;					
+
+					case 10:
+					case 11:
+					document.getElementById('demo10').innerHTML = "Alevines";
+					break;					
+
+					case 12:
+					case 13:
+					document.getElementById('demo10').innerHTML = "Infantiles";
+					break;					
+
+					case 14:
+					case 15:
+					document.getElementById('demo10').innerHTML = "Cadetes";
+					break;					
+
+					case 16:
+					case 17:
+					case 18:
+					document.getElementById('demo10').innerHTML = "Juveniles";
+					break;
+
+					default:
+					document.getElementById('demo10').innerHTML = "Escribe la edad otra vez";
+				}
+
+
+			} else {
+				console.log("else funciona");
+				document.getElementById('demo10').innerHTML = "Escribe la edad correctamente";
+			}
+		}
+
+		function showResult11(){
+		
+			var mes = ((document.getElementById('mes').value).trim()).toLowerCase();
+			
+				switch(mes) {
+
+					case "enero":
+					case "febrero":
+					case "marzo":
+					document.getElementById('demo11').innerHTML = "T1";
+					break;
+
+					case "abril":
+					case "mayo":
+					case "junio":
+					document.getElementById('demo11').innerHTML = "T2";
+					break;
+
+					case "julio":
+					case "agosto":
+					case "septiembre":
+					document.getElementById('demo11').innerHTML = "T3";
+					break;					
+
+					case "octubre":
+					case "noviembre":
+					case "diciembre":
+					document.getElementById('demo11').innerHTML = "T4";
+					break;
+
+					default:
+					document.getElementById('demo11').innerHTML = "¡Escribe el nombre de un mes!";
+				}
+		}
+
+		function showResult12(){
+			var nacimiento = document.getElementById('born').valueAsDate;
+			console.log(typeof(nacimiento));
+			var dia = nacimiento.getDate();
+			var mes = nacimiento.getMonth();
+
+			if (mes == 0) {
+				if(dia <= 20){
+					document.getElementById('demo12').innerHTML = "Capricornio";
+				} else {
+					document.getElementById('demo12').innerHTML = "Acuario";
+				}
+			}
+
+
+			else if (mes == 1) {
+				if(dia <= 19){
+					document.getElementById('demo12').innerHTML = "Acuario";
+				} else {
+					document.getElementById('demo12').innerHTML = "Piscis";
+				}
+			}
+
+			else if (mes == 2) {
+				if(dia <= 20){
+					document.getElementById('demo12').innerHTML = "Piscis";
+				} else {
+					document.getElementById('demo12').innerHTML = "Aries";
+				}
+			}
+			
+			else if (mes == 3) {
+				if(dia <= 21){
+					document.getElementById('demo12').innerHTML = "Aries";
+				} else {
+					document.getElementById('demo12').innerHTML = "Tauro";
+				}
+			}
+
+			else if (mes == 4) {
+				if(dia <= 21){
+					document.getElementById('demo12').innerHTML = "Tauro";
+				} else {
+					document.getElementById('demo12').innerHTML = "Géminis";
+				}
+			}
+
+			else if (mes == 5) {
+				if(dia <= 21){
+					document.getElementById('demo12').innerHTML = "Géminis";
+				} else {
+					document.getElementById('demo12').innerHTML = "Cáncer";
+				}
+			}			
+
+			else if (mes == 6) {
+				if(dia <= 22){
+					document.getElementById('demo12').innerHTML = "Cáncer";
+				} else {
+					document.getElementById('demo12').innerHTML = "Leo";
+				}
+			}			
+
+			else if (mes == 7) {
+				if(dia <= 22){
+					document.getElementById('demo12').innerHTML = "Leo";
+				} else {
+					document.getElementById('demo12').innerHTML = "Virgo";
+				}
+			}			
+
+			else if (mes == 8) {
+				if(dia <= 22){
+					document.getElementById('demo12').innerHTML = "Virgo";
+				} else {
+					document.getElementById('demo12').innerHTML = "Libra";
+				}
+			}			
+
+			else if (mes == 9) {
+				if(dia <= 22){
+					document.getElementById('demo12').innerHTML = "Libra";
+				} else {
+					document.getElementById('demo12').innerHTML = "Escorpio";
+				}
+			}			
+
+			else if (mes == 10) {
+				if(dia <= 22){
+					document.getElementById('demo12').innerHTML = "Escorpio";
+				} else {
+					document.getElementById('demo12').innerHTML = "Sagitario";
+				}
+			}
+
+			else {
+				if(mes == 11){
+					if(dia <= 21){
+						document.getElementById('demo12').innerHTML = "Sagitario";
+					} else {
+						document.getElementById('demo12').innerHTML = "Capricornio";
+					}
+				}
+
+			}	
+		}
+		
+		function showResult13(){
+			
+			var provincia = ["Álava", "Albacete", "Alicante", "Almería", "Ávila", "Badajoz", "Islas Baleares", "Barcelona", "Burgos", "Cáceres", "Cádiz", "Castellón", "Ciudad Real", "Córdoba", "La Coruña", "Cuenca", "Gerona", "Granada", "Guadalajara", "Guipúzcoa", "Huelva", "Huesca", "Jaén", "León", "Lérida", "La Rioja", "Lugo", "Madrid", "Málaga", "Murcia", "Navarra", "Orense", "Asturias", "Palencia", "Las Palmas", "Pontevedra", "Salamanca", "Santa Cruz de Tenerife", "Cantabria", "Segovia", "Sevilla", "Soria", "Tarragona", "Teruel", "Toledo", "Valencia", "Valladolid", "Vizcaya", "Zamora", "Zaragoza", "Ceuta", "Melilla"];
+
+			var cp = document.getElementById('cp').value; 
+
+			var iniciales = cp.substring(0, cp.length-3);
+
+			var cpini = parseInt(iniciales);
+			
+
+			for (var i = 0; i <= provincia.length; i ++) {
+
+				if ( cpini == parseInt(provincia.indexOf(provincia[i])+1) ) {
+				document.getElementById('demo13').innerHTML = provincia[i];
+				} 
+
+				if ( cpini < 1 || cpini > 52 ) {
+					document.getElementById('demo13').innerHTML = "Escribe un código postal válido";
+				}
+
+			}
+		}
+
+		function showResult14(){
+			
+			var numero = document.getElementById('entrada').value; 
+			console.log(numero);
+			var semana = ["Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado", "Domingo"];
+			for (var i = 0; i <= semana.length; i ++) {
+
+				if ( numero == parseInt(semana.indexOf(semana[i])+1) ) {
+				document.getElementById('demo14').innerHTML = semana[i];
+				} 
+
+				if ( numero < 1 || numero > 7 ) {
+					document.getElementById('demo14').innerHTML = "Escribe un número válido";
+				}
+
+			}	
+		}
+
+		function showResult15(){
+
+			var letras = ["T", "R", "W", "A", "G", "M", "Y", "F", "P", "D", "X", "B", "N", "J", "Z",		  "S", "Q", "V", "H", "L", "C", "K", "E", "T"];
+
+			var dni = document.getElementById('dni').value;
+
+			var numerodni = parseInt(dni.substring(0, 8));
+
+			var letradni = dni.charAt(8);
+
+			var indiceLetra = parseInt(numerodni%23); 
+			
+
+			if ( letras[indiceLetra] == letradni ){
+				document.getElementById('demo15').innerHTML = "Letra correcta";
+			} else {
+				document.getElementById('demo15').innerHTML = "Letra equivocada";
+			}
+		}
+
+		function showResult16(){
+			var tempo = document.getElementById('horayminutos').value;
+			
+			console.log(typeof(tempo));
+			
+			var hora = parseInt(tempo.substring(0,2));
+
+			for (var i=0; i <= 24; i++){
+
+				if ( hora >= 0 && hora <= 6 ) {
+					document.getElementById('demo16').innerHTML = "Es de madrugada";
+				} else if ( hora > 6 && hora <= 12 ) {
+					document.getElementById('demo16').innerHTML = "Es de mañana";
+				} else if ( hora > 12 && hora <= 18 ) {
+					document.getElementById('demo16').innerHTML = "Es de tarde";
+				} else {
+					document.getElementById('demo16').innerHTML = "Es de noche";
+				}
+
+			}
+		}
+
+		function showResult17(){
+
+			console.log("se carga");
+
+			var persona = {
+				nombre: "Luis",
+				apellidos: "Guerra",
+				telefono: "444434554",
+				email: "luis@guerra.com",
+				anyo: 1941,
+				edad: 77
+			};
+
+			sdocument.getElementById('tabla').append("<tr><td>"+persona.nombre+"</td><td>"+persona.apellidos+"</td><td>"+persona.telefono+"</td><td>"+persona.email+"</td><td>"+persona.anyo+"</td><td>+"persona.edad+"</td></tr>");
+			
+		}
+
+		
+		
+	</script>
+
+</body>
+</html>
