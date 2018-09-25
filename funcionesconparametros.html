@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Parámetros</title>
+	<script type="text/javascript">
+		
+		var operacion = prompt("Indique la operacion que desea realizar: suma, resta, división o multiplicación");
+
+
+		function operandos(operacion){
+			
+			var dato1 = parseInt(prompt("Dime primer operando"));
+			var dato2 = parseInt(prompt("Dime segundo operando"));
+
+			if (operacion == "suma"){
+				return dato1 + dato2;
+			} else if (operacion == "resta"){
+				return dato1 - dato2;
+			} else if (operacion == "multiplicación"){
+				return dato1 * dato2;
+			} else {
+				return dato1 / dato2;
+			}
+
+		}
+
+		operandos(operacion);
+
+
+	</script>
+</head>
+<body>
+
+
+</body>
+</html>
