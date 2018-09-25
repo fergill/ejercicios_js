@@ -1,0 +1,36 @@
+class Personas {
+	constructor (nombre, apellidos, direccion){
+		this.nombre = nombre;
+		this.apellidos = apellidos;
+		this.direccion = direccion;
+	}
+
+	mostrarPersona(){
+		return "La persona seleccionada es: "+ this.nombre + " , " + this.apellidos + " , " + this.direccion
+	}
+}
+
+
+var persona1 = new Personas ("Andy", "Wharhol", "Paraiso Road");
+
+console.log(persona1.mostrarPersona());
+
+
+
+class Empleados extends Personas {
+		constructor (nombre, apellidos, direccion, departamento, salario){
+		super(nombre, apellidos, direccion);
+		this.departamento = departamento;
+		this.salario = salario;
+	}
+
+	mostrarEmpleado(){
+		return "El empleado seleccionado es: "+ this.nombre + " , " + this.apellidos + " , " + this.direccion + " , " + this.departamento + " , " + this.salario;
+	}
+
+}
+
+var empleado1 = new Empleados (persona1.nombre, persona1.apellidos, persona1.direccion, "Creativo", "1 millón");
+
+
+console.log(empleado1.mostrarEmpleado());
