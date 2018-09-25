@@ -3,7 +3,20 @@
 <head>
 	<title>Parámetros</title>
 	<script type="text/javascript">
-		
+
+		var sorteo = [];
+
+		for (var i=0; i<=5; i++){
+			sorteo[i] = Math.round(Math.random()*100);
+		}
+
+								
+
+
+
+		console.log("--------------------------")
+
+
 		var operacion = prompt("Indique la operacion que desea realizar: suma, resta, división o multiplicación");
 
 
@@ -25,6 +38,14 @@
 		}
 
 		operandos(operacion);
+
+
+		/*Array Asociativo*/
+
+		var coche = {color:"rojo", marca:"seat", modelo:"ibiza"}
+		for (var clave in coche){
+			document.write(clave + " : " + coche[clave] + " ");
+		}
 
 
 	</script>
