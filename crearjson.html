@@ -1,0 +1,117 @@
+
+
+
+<!-- Promesas 
+
+var promise = new Promise (function (resolve, fracaso){
+	const valor = 5;
+	if(valor == 5){
+		resolve();
+	} else{
+		fracaso();
+	}
+})
+
+promise.then(function(resolve){
+	console.log("Exito");
+},
+			function(fracaso){
+	console.log("Error");
+});
+
+Promesas -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<script type="text/javascript">
+
+	window.onload=init;
+	function init(){
+
+		alert("hey");
+
+		document.getElementById("botonSuma").onclick=sumaNumero;
+
+			crearJson();
+
+			function crearJson(){
+
+				var nombre = [];
+				var apellido = [];
+				var ciudad = [];
+				var personas = [];
+
+				nombre[0] = "Paco";
+				nombre[1] = "Juan";
+				nombre[2] = "Maria";
+
+				apellido[0] = "Gil";
+				apellido[1] = "Garcia";
+				apellido[2] = "Lopez";	
+
+				ciudad[0] = "Madrid";
+				ciudad[1] = "Toledo";
+				ciudad[2] = "Guadalajara";
+
+				alert("hola");
+
+				for (let i=0; i<nombre.length; i++){
+					personas.push({
+						"nombre":nombre[i],
+						"apellido":apellido[i],
+						"ciudad":ciudad[i]
+								});
+				}
+				
+				alert("despues");
+
+
+			console.log(personas);
+			console.log(JSON.stringify(personas));
+
+				var objeto = {};
+				objeto.personas=personas;
+				console.log(JSON.stringify(objeto));
+
+				console.log(personas[0].nombre);
+
+			for (let i=0; i<3; i++){
+				console.log("la persona se llama "+ personas[i].nombre);
+			}
+		}
+
+		//trycatch
+
+
+
+
+		function sumaNumero(){
+
+			try{
+				var n1 = parseInt(document.getElementById("numero1").value);
+				var n1 = parseInt(document.getElementById("numero1").value);
+				
+				if(isNaN(n1) || isNaN(n2)){
+					throw "Por favor, introduzca dos numeros";
+				}
+				var resultado = n1+n2;
+				document.getElementById("resultado").innerHTML = n1 + "+" + n2 + "=" + resultado;
+			} catch(error){
+				document.getElementById("resultado").innerHTML = error;
+				}
+
+			console.log("hola2");
+			}
+	}
+</script>
+</head>
+<body>
+	<input type="text" name="numero1" id="numero1">
+	<input type="text" name="numero2" id="numero2">
+	<button id="botonSuma">Suma</button>
+	<p id="resultado"></p>
+</body>
+</html>
